@@ -17,19 +17,6 @@ class HomeController < ApplicationController
     
   end
   
-  def comment_write
-    
-    new_comm = Comment.new
-    
-    new_comm.comment_content = params[:comment_content]
-    new_comm.post_id = params[:post_id]
-    
-    new_comm.save
-    
-    redirect_to :back #이전 page로 이동
-    
-  end
-  
   def destroy
     
     @post = Post.find(params[:post_id])
